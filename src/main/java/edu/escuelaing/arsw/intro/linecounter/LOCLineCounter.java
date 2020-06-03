@@ -21,7 +21,7 @@ public class LOCLineCounter implements LineCounter{
     /**
      * Iterando de a parejas de caracteres en una linea
      * incrementa el contador si es de codigo.
-     * @param line 
+     * @param line la linea a contar (o no )
      */
     @Override
     public void count(String line) {

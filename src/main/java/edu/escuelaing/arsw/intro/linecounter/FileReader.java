@@ -20,14 +20,16 @@ public class FileReader {
     private LineCounter lineCounter;
     
     /**
-     * Contructor a base de opciones en String     * 
+     * Contructor a base de opciones en String
+     * @param option la opcion a tomar
      * @throws Exception si no encuentra opcion valida.
      */
     public FileReader(String option) throws Exception {        
         chooseLineCounter(option);       
     }   
     /**
-     * Contructor dando un LineCounter especifico     *
+     * Contructor dando un 
+     * @param lineCounter el LineCounter 
      */
      public FileReader(LineCounter lineCounter) {           
         setLineCounter(lineCounter);       
@@ -42,10 +44,9 @@ public class FileReader {
         this.lineCounter = lineCounter;
     }   
     /**
-     * A partir de un string asigna un LineCounter 
-     * phy  : physical
-     * loc  : lines of code
-     * @param option
+     * A partir de un string asigna un LineCounter
+     * 
+     * @param option phy  : physical , loc  : lines of code
      * @throws Exception si no encuentra una opcion valida.
      */
     public void chooseLineCounter(String option) throws Exception {
@@ -62,9 +63,9 @@ public class FileReader {
     }    
  
     /**
-     * A partir de un lector configurado y un parametro path (string) 
+     * A partir de un lector configurado y un parametro (string) 
      * de un archivo: lee el archivo y calcula la cantidad de lineas.
-     * @param path 
+     * @param path ruta del archivo
      * @throws Exception si no es posible leer el archivo.
      */
     public void read(String path) throws Exception{
@@ -87,9 +88,9 @@ public class FileReader {
     }    
     /**
      * A partir de un lector configurado y un parametro 
-     * array de paths de archivos: lee y calcula la cantidad
+     * array de strings de archivos: lee y calcula la cantidad
      * de lineas de cada uno
-     * @param paths
+     * @param paths las rutas
      * @throws Exception si no es posible leer alguno de los archivos
      */
     public void read(String[] paths) throws Exception{
