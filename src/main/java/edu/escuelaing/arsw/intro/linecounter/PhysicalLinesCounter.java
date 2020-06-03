@@ -18,7 +18,7 @@ public class PhysicalLinesCounter implements LineCounter{
     /**
      * Aumenta simplemente el contador
      * por cada linea que llegue
-     * @param line 
+     * @param line la linea a contar (o no ) 
      */
     @Override
     public void count(String line) {

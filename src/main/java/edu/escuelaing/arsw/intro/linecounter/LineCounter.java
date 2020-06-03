@@ -14,7 +14,7 @@ import java.io.BufferedReader;
 public interface LineCounter {
     /**
      * Para ingresar y contar (o no) una linea
-     * @param line 
+     * @param line la linea a contar (o no )    
      */
     public void count(String line);
     
@@ -24,8 +24,7 @@ public interface LineCounter {
      */
     public int getLines();
      /**
-     * Devuelve un mensaje especificando el tipo de conteo y su resultado
-     * @param line 
+     * Devuelve un mensaje especificando el tipo de conteo y su resultado     * 
      */
     public String getInfo();       
 }

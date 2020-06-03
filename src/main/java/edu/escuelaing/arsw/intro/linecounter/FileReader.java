@@ -20,16 +20,14 @@ public class FileReader {
     private LineCounter lineCounter;
     
     /**
-     * Contructor a base de opciones en String
-     * @param option
+     * Contructor a base de opciones en String     * 
      * @throws Exception si no encuentra opcion valida.
      */
     public FileReader(String option) throws Exception {        
         chooseLineCounter(option);       
     }   
     /**
-     * Contructor dando un LineCounter especifico
-     * @param lineCounter 
+     * Contructor dando un LineCounter especifico     *
      */
      public FileReader(LineCounter lineCounter) {           
         setLineCounter(lineCounter);       
