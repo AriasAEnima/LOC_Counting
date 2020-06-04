@@ -1,9 +1,16 @@
 # LOC Counting
 
-Esta aplicación permite contar las líneas físicas y de código java existentes en un archivo, dando parámetros por la terminal
+Esta aplicación permite contar las líneas físicas y de código java existentes en un archivo, dando parámetros por la terminal.
+## Rendimiento LOC/h
+
+1. Desde las 11:00 , hasta las 22:00 (con un receso de 2 hr)  fueron aprox 250 lineas
+2. Desde las 18:00 , hasta las 20:00 PM fueron aprox 50 lineas.
+
+LOC=23 LOC/h 
+
 
 ## Articulo del Proyecto:
-
+## [Documento (click)](https://github.com/AriasAEnima/LOC_Counting/blob/master/src/site/resources/LoC%20Counting%20ARSW.pdf)
 
 ## Para empezar
 
