@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package edu.escuelaing.arsw.intro.linecounter;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  *
@@ -14,7 +12,7 @@ import java.util.Arrays;
 public class LOCLineCounter implements LineCounter{
     //Constants
     private final String info="Code lines: ";
-    private final ArrayList<String> wildcards = new ArrayList<String>(Arrays.asList("//","/*"," *","* "," /"));
+    private final String wildcards="/*";
     //Not Constants
     private int lines; //contador de lineas
     
@@ -26,16 +24,14 @@ public class LOCLineCounter implements LineCounter{
     @Override
     public void count(String line) {
         boolean isCodeOrComment=false;  // Rompe el ciclo si encontramos que tipo de linea es.
-        int i=1; //Empezamos en 1 para mirar en duplas y no repetir
-        while (!isCodeOrComment && i<line.length() && line.length()>0 ){ 
-            // Mientras no se sepa que tipo de linea es o resulte ser una en blanco.
-            String duple=line.substring(i-1,i+1);             
-            if(wildcards.contains(duple)){ // Si es una de comentario
-                isCodeOrComment=true;
-            }else if(!duple.equals("  ")){ // Si no es comentario, ni en blanco, entonces es Codigo        
-                //System.out.println(line);
-                isCodeOrComment=true;
-                lines++;   // Aumentamos el contador
+        int i=0; 
+        while (!isCodeOrComment && i<line.length()){ 
+            // Mientras no se sepa que tipo de linea es o resulte ser una en blanco. 
+            if(wildcards.contains(line.charAt(i)+"")){ // Si es una de comentario
+                isCodeOrComment=true;               
+            }else if(!(line.charAt(i)+"").equals(" ")){ // Si tampco es blanco , sera codigo
+                lines++;
+                isCodeOrComment=true;                    
             }   
             i++;
         }     

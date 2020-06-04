@@ -58,7 +58,22 @@ public class AppTest
             FileReader FR = new FileReader("loc");
             FR.read("resources/prueba2.java");
             int resultado=FR.getLineCounter().getLines();
-            assertEquals(resultado,56);
+            assertEquals(resultado,57);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            fail("Algo Fallo ! ");              
+        }
+       
+    }
+     
+    public void testAmbosArchivosLoc()
+    {
+        try {
+            FileReader FR = new FileReader("loc");
+            FR.read(new String[]{"resources/prueba2.java",
+                "resources/prueba.java"});
+            int resultado=FR.getLineCounter().getLines();
+            assertEquals(resultado,57+12);
         } catch (Exception ex) {
             ex.printStackTrace();
             fail("Algo Fallo ! ");              
